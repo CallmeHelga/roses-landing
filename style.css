@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+a:hover {
+    text-decoration: none;
+    color: yellow;
+    transform: scale(1.1);
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #cd325c;
+}
+
+.nav_logo {
+    margin-left: 50px;
+}
+
+.nav_menu {
+    display: flex;
+    gap: 15px;
+}
+
+.nav_menu li {
+    list-style: none;
+}
+
+.nav_menu a {
+    padding: 5px 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #E0E0E0;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+.home_page {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+
+}
+
+.home_page img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.text_container h1 {
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.text_container h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.about_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about img {
+    width: 300px;
+    height: auto;
+}
+
+.about_content div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
+.about p {
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.items h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.items ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.items li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    min-width: 200px;
+}
+
+.items img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.items p {
+    margin-top: 30px;
+}
+
+.contacts h1 {
+    text-align: center;
+    margin: 40px 40px;
+}
+
+.contacts p {
+    margin-bottom: 20px;
+}
+
+.footer_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #444;
+    color: white;
+}
+
+.footer_left h1 {
+    margin-bottom: 20px;
+
+}
+
+.footer_left li {
+    list-style: none;
+}
+
+.footer_left ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* ===== Adaptive Design For Tablets ===== */
+
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 90%;
+    }
+
+    .nav_menu {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .text_container {
+        max-width: 70%;
+    }
+
+    .text_container h1 {
+        font-size: 2rem;
+    }
+
+    .text_container h3 {
+        font-size: 1.2rem;
+    }
+
+    .home_page img {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .about_content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .about_content img {
+        width: 80%;
+    }
+
+    .items ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .items li {
+        width: 45%;
+    }
+
+    .contacts {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .contacts p {
+        font-size: 1rem;
+    }
+
+    .footer_container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+/* ===== Adaptive Design For Phones ===== */
+
+@media (max-width: 480px) {
+
+    .text_container {
+        max-width: 80%;
+    }
+
+    .text_container h1 {
+        font-size: 1.5rem;
+    }
+
+    .items ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
